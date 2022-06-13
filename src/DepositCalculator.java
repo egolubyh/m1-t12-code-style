@@ -25,7 +25,7 @@ public class DepositCalculator {
 
     void calculateDeposit() {
         Scanner scanner = new Scanner(System.in);
-
+        //Очень понравилось то, что разделили пробелами логические блоки
         System.out.println("Введите сумму вклада в рублях:");
         int amount = scanner.nextInt();
 
@@ -36,7 +36,11 @@ public class DepositCalculator {
         int command = scanner.nextInt();
 
         double result = 0;
-
+/*
+        И switch лучше чем if, единственное второй break, если убрать то ничего не изменится, мне ревьювер
+        указывал на то, что если используешь switch, то блок default обязателен, но в курсе такого
+        жесткого условия я не нашел.
+*/
         switch (command) {
             case 1:
                 result = calculateSimplePercent(amount, percentDeposit, depositTerm);
